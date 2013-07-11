@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-<LINK href="http://probendingmaster.com/public/miscCode/stylesheet.css" rel="stylesheet" type="text/css">
-<script src="http://probendingmaster.com/public/miscCode/d20Dice.js"></script>
-</head>
-<body>
-<h1>D20 Dice System</h1>
-<button href="http://probendingmaster.com/public/miscCode/d20Dice.js" onclick="d20(5)">Roll 5 D20's</button>
-<button href="http://probendingmaster.com/public/miscCode/d20Dice.js" onclick="d12(3)">Roll 3 D12's</button>
-<button href="http://probendingmaster.com/public/miscCode/d20Dice.js" onclick="d20(2), d12(4), d100(1)">Roll 2 D20's, 4D12's & 1 D100</button>
-</body>
+  <head>
+    <LINK href="http://probendingmaster.com/public/miscCode/stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="http://probendingmaster.com/public/miscCode/d20Dice.js"></script>
+  </head>
+    <body>
+      <h1>D20 Dice System</h1>
+        <form action="" method="post" name="diceForm">
+          <span>How many of each dice would you like to roll?</span>
+          <span class="inputWarn">Please note, if you enter something other than a number the program will not parse that dice.</span><br>
+          D100:<input name="d100" type="text"><br>
+          D20:<input name="d20" type="text"><br>
+          D12:<input name="d12" type="text"><br>
+          D10:<input name="d10" type="text"><br>
+          D8:<input name="d8" type="text"><br>
+          D6:<input name="d6" type="text"><br>
+          D4:<input name="d4" type="text"><br>
+          <span>If you would like to roll a custom dice, please specify the number of dice & the number of sides</span><br>
+          Number of Dice:<input name="numCust" type="text"><br>
+          Number of Sides:<input name="sidesCust" type="text"><br>
+          <input type="submit" value="Roll the bones" href="http://probendingmaster.com/public/miscCode/d20Dice.js" onClick="javascript:rollDice(this.form)">
+          <br><br>
+          <TEXTAREA NAME=output COLS=20 ROWS=100 VALUE="">
+          </TEXTAREA>  
+      </form>
+    </body>
 </html>
