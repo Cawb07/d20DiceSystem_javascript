@@ -14,12 +14,12 @@ Outputs:
 /* These first functions provide the random number generation for each type
 of dice */
 
-function dice_value (min, max) {
+function dice_value(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function D20 (n) {
-    console.log("You rolled " + n + " D20's.");
+function d20(n) {
+    document.write("<p>You rolled " + n + " D20's.</p>");
     
     // Variables 
     var sum = 0;
@@ -59,15 +59,15 @@ function D20 (n) {
     }
     
     // Print all values to console.
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 
 function d100(n) {
-    console.log("You rolled " + n + " D100's.");
+    document.write("<p>You rolled " + n + " D100's.</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -102,14 +102,14 @@ function d100(n) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 function d12(n) {
-    console.log("You rolled " + n + " D12's.");
+    document.write("<p>You rolled " + n + " D12's.</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -144,14 +144,14 @@ function d12(n) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 function d10(n) {
-    console.log("You rolled " + n + " D10's.");
+    document.write("<p>You rolled " + n + " D10's.</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -186,14 +186,14 @@ function d10(n) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 function d8(n) {
-    console.log("You rolled " + n + " D8's.");
+    document.write("<p>You rolled " + n + " D8's.</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -228,14 +228,14 @@ function d8(n) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 function d6(n) {
-    console.log("You rolled " + n + " D6's.");
+    document.write("<p>You rolled " + n + " D6's.</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -270,14 +270,14 @@ function d6(n) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 function d4(n) {
-    console.log("You rolled " + n + " D4's.");
+    document.write("<p>You rolled " + n + " D4's.</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -312,15 +312,15 @@ function d4(n) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }
 function customDice(n, sides) {
 // This function rolls a number of dice with a specified number of sides
-    console.log("You rolled " + n + " D" + sides + "'s");
+    document.write("<p>You rolled " + n + " D" + sides + "'s</p>");
     
     var sum = 0;
     var dice = new Array();
@@ -355,9 +355,9 @@ function customDice(n, sides) {
         }
     }
     
-    console.log("The total value of all dice was " + sum);
-    console.log("Each dice rolled the following numbers: " + dice);
-    console.log("The highest dice was " + high);
-    console.log("The lowest dice was " + low);
-    console.log("The value of all dice multiplied together was " + multi);
+    document.write("<p>The total value of all dice was " + + sum + "</p>");
+    document.write("<p>Each dice rolled the following numbers: " + dice + "</p>");
+    document.write("<p>The highest dice was " + high + "</p>");
+    document.write("<p>The lowest dice was " + low + "</p>");
+    document.write("<p>The value of all dice multiplied together was " + multi + "</p>");
 }

@@ -1,0 +1,11 @@
+button {
+	width: 100px;
+	height: 60px;
+	background-color: red;
+}
+p {
+	background-color: black;
+	width: 400px;
+	height: 700px;
+	color: white;
+}
