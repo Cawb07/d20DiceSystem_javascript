@@ -15,7 +15,9 @@ dice.each = [];
 dice.high = 0;
 dice.low = (dice.sides[i] + 1);
 dice.multi = 1;
+dice.average = 0;
 
+//Grabs values from HTML form
 dice.num[0] = document.diceForm.numCust.value;
 dice.num[1] = document.diceForm.d4.value;
 dice.num[2] = document.diceForm.d6.value;
@@ -41,6 +43,7 @@ function rollDice() {
             dice.each.push(diceValue(1, (dice.sides[i] + 1)));
             dice.multi = dice.multi * (diceValue(1, (dice.sides[i] + 1)));
             dice.num[i]--;
+            dice.average = (dice.sum/dice.num.length);
             }
 
         for (p = 0; p < dice.each.length; p++) {
@@ -51,13 +54,7 @@ function rollDice() {
                 dice.low = dice.each[p];
             }
         }
-        output = output + ("<p>The total value of all dice was " + dice.sum + ".<br>");
-        output = output + ("Each dice rolled the following numbers: " + dice.each + ".<br>");
-        output = output + ("The highest dice was " + dice.high + ".<br>");
-        output = output + ("The lowest dice was " + dice.low + ".<br>");
-        output = output + ("The value of all dice multiplied together was " + dice.multi + ".</p>");
-    
-        console.log(output);
+// Places output in proper output areas        
     }
-    document.diceForm.output.value = output;
 }
+
