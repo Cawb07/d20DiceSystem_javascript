@@ -27,3 +27,11 @@ td {
 	text-align: center;
 	border: 2px solid black;
 }
+.inputWarn {
+	color: red;
+	font-size: 12px;
+}
+.faq {
+	color: blue;
+	font-size: 12px;
+}

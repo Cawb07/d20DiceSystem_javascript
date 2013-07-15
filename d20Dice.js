@@ -54,7 +54,14 @@ function rollDice() {
                 dice.low = dice.each[p];
             }
         }
-// Places output in proper output areas        
+/* Places output in proper output areas. Need to figure out the proper way to change the name to
+the proper form sections.
+	document.output.d(dice.sides[i])Sum.value = dice.sum;
+	document.output.d(dice.sides[i])Array.value = dice.each;
+	document.output.d(dice.sides[i])High.value = dice.high;
+	document.output.d(dice.sides[i])Low.value = dice.low;
+	document.output.d(dice.sides[i])Multi.value = dice.multi;
+	document.output.d(dice.sides[i])Average.value = dice.average; */
     }
 }
 

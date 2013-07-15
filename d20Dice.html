@@ -6,9 +6,10 @@
   </head>
     <body>
       <h1>D20 Dice System</h1>
-        <form action="" method="post" name="diceForm">
-          <span>How many of each dice would you like to roll?</span>
-          <span class="inputWarn">Please note, if you enter something other than a number the program will not parse that dice.</span><br><br>
+      	<a href="http://probendingmaster.com/public/miscCode/d20/faq.html" class="faq">What is this program?</a><br><br>
+        <form onsubmit="javascript:rollDice() name="diceForm">
+          <span>How many of each dice would you like to roll?</span><br>
+          <span class="inputWarn">Please note, if you enter something other than a number the program will give an ouput of 'Undefined'.</span><br><br>
           D100:<input name="d100" type="text"><br>
           D20:<input name="d20" type="text"><br>
           D12:<input name="d12" type="text"><br>
@@ -19,10 +20,11 @@
           <span>If you would like to roll a custom dice, please specify the number of dice & the number of sides</span><br><br>
           Number of Dice:<input name="numCust" type="text"><br>
           Number of Sides:<input name="sidesCust" type="text"><br><br>
-          <input type="submit" value="Roll the bones" href="http://probendingmaster.com/public/miscCode/d20Dice.js" onClick="javascript:rollDice(this.form)">
+          <input type="submit" value="Roll the bones">
           </form>
           <br>
           <h2>Your rolls</h2>
+          <form action="" method="post" name="output">
           <table>
           	<tr><th colspan="9">Total Value</th></tr>
           		<tr>
@@ -106,6 +108,8 @@
           		<td>Custom Dice<TEXTAREA NAME=custAverageNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
           		<td><TEXTAREA NAME=custAverage COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
           		</tr>
-		</table><br>
+		</table><br><br><br>
+		</form>
+		<div align="center" style="font-size: 12px;">Copyright &copy; 2013 Jeffrey Brice</div>
     </body>
 </html>
