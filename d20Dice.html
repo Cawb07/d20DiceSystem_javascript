@@ -4,112 +4,138 @@
     <LINK href="http://probendingmaster.com/public/miscCode/stylesheet.css" rel="stylesheet" type="text/css">
     <script src="http://probendingmaster.com/public/miscCode/d20Dice.js"></script>
   </head>
-    <body>
-      <h1>D20 Dice System</h1>
-      	<a href="http://probendingmaster.com/public/miscCode/d20/faq.html" class="faq">What is this program?</a><br><br>
-        <form onsubmit="javascript:rollDice() name="diceForm">
-          <span>How many of each dice would you like to roll?</span><br>
-          <span class="inputWarn">Please note, if you enter something other than a number the program will give an ouput of 'Undefined'.</span><br><br>
-          D100:<input name="d100" type="text"><br>
-          D20:<input name="d20" type="text"><br>
-          D12:<input name="d12" type="text"><br>
-          D10:<input name="d10" type="text"><br>
-          D8:<input name="d8" type="text"><br>
-          D6:<input name="d6" type="text"><br>
-          D4:<input name="d4" type="text"><br><br>
-          <span>If you would like to roll a custom dice, please specify the number of dice & the number of sides</span><br><br>
-          Number of Dice:<input name="numCust" type="text"><br>
-          Number of Sides:<input name="sidesCust" type="text"><br><br>
-          <input type="submit" value="Roll the bones">
-          </form>
-          <br>
-          <h2>Your rolls</h2>
-          <form action="" method="post" name="output">
-          <table>
-          	<tr><th colspan="9">Total Value</th></tr>
-          		<tr>
-          		<td>D100<TEXTAREA NAME=d100Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D20<TEXTAREA NAME=d20Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D12<TEXTAREA NAME=d12Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D10<TEXTAREA NAME=d10Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D8<TEXTAREA NAME=d8Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D6<TEXTAREA NAME=d6Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D4<TEXTAREA NAME=d4Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>Custom Dice<TEXTAREA NAME=custSumNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td><TEXTAREA NAME=custSum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		</tr>
-          </table><br>
-          <table>
-          	<tr><th colspan="9">Each Dice</th></tr>
-          		<tr>
-          		<td>D100<TEXTAREA NAME=d100Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D20<TEXTAREA NAME=d20Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D12<TEXTAREA NAME=d12Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D10<TEXTAREA NAME=d10Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-				<td>D8<TEXTAREA NAME=d8Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D6<TEXTAREA NAME=d6Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-      		    <td>D4<TEXTAREA NAME=d4Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-     		    <td>Custom Dice<TEXTAREA NAME=custArrayNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-    		    <td><TEXTAREA NAME=custArray COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-    		    </tr>
-		</table><br>
-		<table>
-          	<tr><th colspan="9">Highest Dice</th></tr>
-          		<tr>
-          		<td>D100<TEXTAREA NAME=d100High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-     		    <td>D20<TEXTAREA NAME=d20High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-     		    <td>D12<TEXTAREA NAME=d12High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-   			    <td>D10<TEXTAREA NAME=d10High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-    		    <td>D8<TEXTAREA NAME=d8High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D6<TEXTAREA NAME=d6High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D4<TEXTAREA NAME=d4High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>Custom Dice<TEXTAREA NAME=custHighNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td><TEXTAREA NAME=custHigh COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		</tr>
-          </table><br>
-          <table>
-          	<tr><th colspan="9">Lowest Dice</th></tr>
-          		<tr>
-          		<td>D100<TEXTAREA NAME=d100Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D20<TEXTAREA NAME=d20Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D12<TEXTAREA NAME=d12Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D10<TEXTAREA NAME=d10Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D8<TEXTAREA NAME=d8Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D6<TEXTAREA NAME=d6Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D4<TEXTAREA NAME=d4Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>Custom Dice<TEXTAREA NAME=custLowNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td><TEXTAREA NAME=custLow COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		</tr>
-          	</table><br>
-          <table>
-          	<tr><th colspan="9">Dice Multiplied Together</th></tr>
-          		<tr>
-          		<td>D100<TEXTAREA NAME=d100Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D20<TEXTAREA NAME=d20Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D12<TEXTAREA NAME=d12Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D10<TEXTAREA NAME=d10Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-         		<td>D8<TEXTAREA NAME=d8Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D6<TEXTAREA NAME=d6Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D4<TEXTAREA NAME=d4Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>Custom Dice<TEXTAREA NAME=custMultiNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td><TEXTAREA NAME=custMulti COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		</tr>
-			</table><br>
-          <table>
-          	<tr><th colspan="9">Dice Average</th></tr>
-          		<tr>
-          		<td>D100<TEXTAREA NAME=d100Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D20<TEXTAREA NAME=d20Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D12<TEXTAREA NAME=d12Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D10<TEXTAREA NAME=d10Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D8<TEXTAREA NAME=d8Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D6<TEXTAREA NAME=d6Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>D4<TEXTAREA NAME=d4Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td>Custom Dice<TEXTAREA NAME=custAverageNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		<td><TEXTAREA NAME=custAverage COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
-          		</tr>
-		</table><br><br><br>
-		</form>
-		<div align="center" style="font-size: 12px;">Copyright &copy; 2013 Jeffrey Brice</div>
-    </body>
+  <body>
+    <h1>D20 Dice System</h1>
+    <a href="http://probendingmaster.com/public/miscCode/d20/faq.html" class="faq">What is this program?</a><br><br>
+    <span>How many of each dice would you like to roll?</span><br>
+    <span class="inputWarn">Please note, if you enter something other than a number the program will give an ouput of 'Undefined'.</span><br><br>        
+    <form onsubmit="javascript:rollDice(this.form);return false" name="diceForm">
+      D100:<input name="d100" type="text"><br>
+      D20:<input name="d20" type="text"><br>
+      D12:<input name="d12" type="text"><br>
+      D10:<input name="d10" type="text"><br>
+      D8:<input name="d8" type="text"><br>
+      D6:<input name="d6" type="text"><br>
+      D4:<input name="d4" type="text"><br><br>
+      <span>If you would like to roll a custom dice, please specify the number of dice & the number of sides</span><br><br>
+      Number of Dice:<input name="numCust" type="text"><br>
+      Number of Sides:<input name="sidesCust" type="text"><br><br>
+        <input class="submit" type="submit" value="Roll the bones" />
+    </form>
+        <form onsubmit="javascript:clearForm(this.form);return false" name="clearForm">
+          <input class="submit" type="submit" value="Clear Tables" />
+        </form>
+    <br>
+    <h2>Your rolls</h2>
+        <span>Expand text fields to see larger results</span>
+    <form action="" method="post" name="output">
+      <table>
+        <tr>
+          <th colspan="9">Total Value</th>
+        </tr>
+        <tr>
+          <td>D100<TEXTAREA NAME=d100Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D20<TEXTAREA NAME=d20Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D12<TEXTAREA NAME=d12Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D10<TEXTAREA NAME=d10Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D8<TEXTAREA NAME=d8Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D6<TEXTAREA NAME=d6Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D4<TEXTAREA NAME=d4Sum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>Custom Dice<TEXTAREA NAME=custSumNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+        </tr>
+      </table>
+      <br>
+    </form>
+    <form action="" method="post" name="output2">
+      <table>
+        <tr>
+          <th colspan="9">Each Dice</th>
+        </tr>
+        <tr>
+          <td>D100<TEXTAREA NAME=d100Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D20<TEXTAREA NAME=d20Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D12<TEXTAREA NAME=d12Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D10<TEXTAREA NAME=d10Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D8<TEXTAREA NAME=d8Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D6<TEXTAREA NAME=d6Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D4<TEXTAREA NAME=d4Array COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>Custom Dice<TEXTAREA NAME=custArrayNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+        </tr>
+      </table>
+      <br>
+    </form>
+    <form action="" method="post" name="output3">
+      <table>
+        <tr>
+          <th colspan="9">Highest Dice</th>
+        </tr>
+        <tr>
+          <td>D100<TEXTAREA NAME=d100High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D20<TEXTAREA NAME=d20High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D12<TEXTAREA NAME=d12High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D10<TEXTAREA NAME=d10High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D8<TEXTAREA NAME=d8High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D6<TEXTAREA NAME=d6High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D4<TEXTAREA NAME=d4High COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>Custom Dice<TEXTAREA NAME=custHighNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+        </tr>
+      </table>
+      <br>
+    </form>
+    <form action="" method="post" name="output4">
+      <table>
+        <tr>
+          <th colspan="9">Lowest Dice</th>
+        </tr>
+        <tr>
+          <td>D100<TEXTAREA NAME=d100Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D20<TEXTAREA NAME=d20Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D12<TEXTAREA NAME=d12Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D10<TEXTAREA NAME=d10Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D8<TEXTAREA NAME=d8Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D6<TEXTAREA NAME=d6Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D4<TEXTAREA NAME=d4Low COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>Custom Dice<TEXTAREA NAME=custLowNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+        </tr>
+      </table>
+      <br>
+    </form>
+    <form action="" method="post" name="output5">
+      <table>
+        <tr>
+          <th colspan="9">Dice Multiplied Together</th>
+        </tr>
+        <tr>
+          <td>D100<TEXTAREA NAME=d100Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D20<TEXTAREA NAME=d20Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D12<TEXTAREA NAME=d12Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D10<TEXTAREA NAME=d10Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D8<TEXTAREA NAME=d8Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D6<TEXTAREA NAME=d6Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D4<TEXTAREA NAME=d4Multi COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>Custom Dice<TEXTAREA NAME=custMultiNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+        </tr>
+      </table>
+      <br>
+    </form>
+    <form action="" method="post" name="output6">
+      <table>
+        <tr>
+          <th colspan="9">Dice Average</th>
+        </tr>
+        <tr>
+          <td>D100<TEXTAREA NAME=d100Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D20<TEXTAREA NAME=d20Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D12<TEXTAREA NAME=d12Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D10<TEXTAREA NAME=d10Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D8<TEXTAREA NAME=d8Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D6<TEXTAREA NAME=d6Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>D4<TEXTAREA NAME=d4Average COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+          <td>Custom Dice<TEXTAREA NAME=custAverageNum COLS=3 ROWS=1 VALUE=""></TEXTAREA></td>
+        </tr>
+      </table>
+      <br><br><br>
+    </form>
+    <div align="center" style="font-size: 12px;">Copyright &copy; 2013 Jeffrey Brice</div>
+  </body>
 </html>
