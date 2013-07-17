@@ -37,3 +37,23 @@ td {
 }
 .rolls {
 }
+.faqPage {
+	height: 600px;
+	width: 1000px;
+	border: 10px solid #dee4fa;
+	border-radius: 10px;
+	background-color: #567880;
+	position: absolute;
+	top:30px;
+	right: 250px;
+	z-index: 1;
+}
+.page {
+	z-index: 0;
+}
+#hideFAQ{
+	text-align: center;
+	text-decoration: italic;
+}
+#showFAQ{
+}
