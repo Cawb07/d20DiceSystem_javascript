@@ -32,6 +32,14 @@ function getSides() {
 	dice.num[7] = document.sidesForm.d100.value;
 }
 
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
+};
+Array.min = function( array ){
+    return Math.min.apply( Math, array );
+};
+
+
 
 function rollDice() {
     "use strict";
@@ -52,18 +60,11 @@ function rollDice() {
             dice.num[i]--;
             }    
 
-// Determines the average of all dice rolled      
+// Determines highest/lowest dice & the average of all dice rolled      
         dice.average = (dice.sum/dice.each.length);
+        dice.low = Array.min(dice.each);
+        dice.high = Array.max(dice.each);
 
-// Determines lowest & highest dice
-        for (var p = 0; p < dice.each.length; p++) {
-            if (dice.each[p] > dice.high) {
-                dice.high = dice.each[p];
-            }
-            else if (dice.each[p] < dice.low) {
-                dice.low = dice.each[p];
-            }
-        }
 // Places output in proper output areas.
       document.forms[2].elements[i].value = dice.sum;
       document.forms[3].elements[i].value = dice.each;
