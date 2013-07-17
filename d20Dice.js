@@ -10,7 +10,7 @@ var i = 0;
 var formHasData = false;
 var dice = Object.create(null);
 dice.sides = [1, 4, 6, 8, 10, 12, 20, 100];
-dice.num = [10, 4, 4, 4, 4, 4, 4, 4];
+dice.num = new Array();
 dice.sum = 0;
 dice.each = new Array();
 dice.high = null;
@@ -19,8 +19,23 @@ dice.multi = 1;
 dice.average = null;
 dice.value = 0;
 
+// Grabs values from the html form for the dice.num array
+function getSides() {
+	dice.sides[0] = document.sidesForm.elements[7].value;
+	dice.num[0] = document.sidesForm.elements[8].value;
+	dice.num[1] = document.sidesForm.elements[6].value;
+	dice.num[2] = document.sidesForm.elements[5].value;
+	dice.num[3] = document.sidesForm.elements[4].value;
+	dice.num[4] = document.sidesForm.elements[3].value;
+	dice.num[5] = document.sidesForm.elements[2].value;
+	dice.num[6] = document.sidesForm.elements[1].value;
+	dice.num[7] = document.sidesForm.elements[0].value;
+}
+
+
 function rollDice() {
     "use strict";
+    getSides();
     for (var i = 0; i < dice.num.length; i++) {
         dice.sum = 0;
         dice.each.length = 0;
