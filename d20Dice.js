@@ -21,15 +21,15 @@ dice.value = 0;
 
 // Grabs values from the html form for the dice.num array
 function getSides() {
-	dice.sides[0] = document.sidesForm.elements[7].value;
-	dice.num[0] = document.sidesForm.elements[8].value;
-	dice.num[1] = document.sidesForm.elements[6].value;
-	dice.num[2] = document.sidesForm.elements[5].value;
-	dice.num[3] = document.sidesForm.elements[4].value;
-	dice.num[4] = document.sidesForm.elements[3].value;
-	dice.num[5] = document.sidesForm.elements[2].value;
-	dice.num[6] = document.sidesForm.elements[1].value;
-	dice.num[7] = document.sidesForm.elements[0].value;
+	dice.sides[0] = document.sidesForm.sidesCust.value;
+	dice.num[0] = document.sidesForm.numCust.value;
+	dice.num[1] = document.sidesForm.d4.value;
+	dice.num[2] = document.sidesForm.d6.value;
+	dice.num[3] = document.sidesForm.d8.value;
+	dice.num[4] = document.sidesForm.d10.value;
+	dice.num[5] = document.sidesForm.d12.value;
+	dice.num[6] = document.sidesForm.d20.value;
+	dice.num[7] = document.sidesForm.d100.value;
 }
 
 
