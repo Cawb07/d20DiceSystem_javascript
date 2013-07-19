@@ -1,5 +1,7 @@
 /*jslint browser:true */
 // Determines value of dice as they are rolled
+
+
 function diceValue(min, max) {
     "use strict";
     return Math.floor((Math.random() * max) + min);
